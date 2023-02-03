@@ -1,0 +1,53 @@
+---
+import { SITE } from '~/config';
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+
+const meta = {
+  title: SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: true,
+};
+---
+
+<Layout {meta}>
+  <Hero
+  callToAction={{ text: 'Join Us', href: '#features' }}
+  >
+    <Fragment slot="title">
+      Developer Student Clubs <span class="text-accent dark:text-purple-500 highlight">SJEC</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      <span class="text-accent dark:text-purple-500 highlight font-semibold">Google Developer Student Clubs</span> are community groups at universities for students interested in Google developer technologies.
+      By participating in <span class="text-accent dark:text-purple-500 highlight font-semibold">GDSC</span>, students expand their knowledge in a peer-to-peer learning environment while also developing solutions
+      for local businesses and their community.
+  </Fragment>
+  </Hero>
+
+  <Content
+  image="https://assets8.lottiefiles.com/private_files/lf30_d6n9vsxs.json"
+  title="What does GDSC-SJEC do?"
+  items={[
+    {
+      title: 'Concept of DSC',
+      description: 'The DSC program is a grassroots channel through which Google provides development, mobile & web development skills for students, towards employability.',
+    },
+    {
+      title: 'Why DSC?',
+      description: 'For students to learn development skills, solve problems through technology and inspire them to be world class developers and changemaker.',
+    },
+    {
+      title: 'Target Audience',
+      description: 'DSC activities are targeted at University students and any others including faculty members who want to learn development skills & work to solve real-life problems.',
+    }
+  ]}
+>
+  <Fragment slot="content">
+    We at <span class="font-bold tracking-tight dark:text-white mb-2">DSC-SJEC</span> are a passionate group of people who work towards bringing a change in the ecosystem of development around the campus.
+    We want to create a healthy environment for the budding developers to exploring solutions to real life problems and promote the <span class="font-bold tracking-tight dark:text-white mb-2">developer culture.</span>
+  </Fragment>
+</Content>
+
+</Layout>
