@@ -1,16 +1,19 @@
-import React from 'react';
-import { useLottie } from 'lottie-react';
-import Hero from '../../assets/lottie/hero.json';
+import { useEffect } from 'react';
+import Hero from '../../assets/lottie/hero.lottie';
 
 const App = () => {
-    const options = {
-      animationData: Hero,
-      loop: true
-    };
-  
-    const { View } = useLottie(options);
-  
-    return <>{View}</>;
+  useEffect(() => {
+    import('@dotlottie/player-component')
+  }, [])
+
+  return (<div className="App">
+  <dotlottie-player
+    src={Hero}
+    autoplay
+    loop
+    style={{ height: '100%', width: '100%' }}
+  />
+</div>)
   };
   
   export default App;

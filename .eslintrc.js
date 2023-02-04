@@ -21,8 +21,8 @@ module.exports = {
       files: ['*.astro'],
       parser: 'astro-eslint-parser',
       parserOptions: {
-        parser: '@typescript-eslint/parser',
-        extraFileExtensions: ['.astro'],
+        parser: ['@typescript-eslint/parser', '@babel/eslint-parser'],
+        extraFileExtensions: ['.astro', '.jsx'],
       },
       rules: {
         'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],

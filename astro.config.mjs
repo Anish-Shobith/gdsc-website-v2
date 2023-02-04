@@ -41,6 +41,7 @@ export default defineConfig({
     ssr: {
       external:  ['svgo']
     },
+    assetsInclude: "**/*.lottie",
     resolve: {
       alias: {
         '~': path.resolve(__dirname, './src'),

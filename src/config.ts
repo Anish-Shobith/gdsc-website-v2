@@ -2,7 +2,7 @@ import defaultImage from './assets/images/default.png';
 
 const CONFIG = {
   name: 'GDSC-SJEC',
-  origin: 'https://astrowind.vercel.app',
+  origin: 'https://gdscsjec.in/',
   basePathname: '/',
   trailingSlash: false,
   title: 'GDSC-SJEC - Official Website of GDSC-SJEC',

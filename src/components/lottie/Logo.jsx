@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import HomeContent from '../../assets/lottie/homecontent.lottie';
+import Logo from '../../assets/lottie/logo.lottie';
 
 const App = () => {
   useEffect(() => {
@@ -8,9 +8,8 @@ const App = () => {
   return (
   <div className="App">
     <dotlottie-player
-      src={HomeContent}
+      src={Logo}
       autoplay
-      loop
       style={{ height: '100%', width: '100%' }}
   />
   </div>
