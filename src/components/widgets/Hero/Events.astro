@@ -1,6 +1,9 @@
 ---
 import { Icon } from 'astro-icon';
-import Hero from '../lottie/Hero';
+import HeroLottie from '~/components/widgets/Hero/HeroLottie.astro';
+
+// @ts-ignore 
+import EventsHeroLottie from '~/assets/lottie/events.lottie';
 
 interface CallToAction {
   text: string;
@@ -22,7 +25,6 @@ const {
   callToAction = await Astro.slots.render('callToAction'),
 } = Astro.props;
 ---
-
 <section class="relative md:-mt-[76px]">
   <div class="absolute inset-0 pointer-events-none" aria-hidden="true"></div>
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
@@ -62,9 +64,7 @@ const {
         </div>
         {content && <Fragment set:html={content} />}
       </div>
-      <div class="basis-1/2">
-        <Hero client:load/>
-      </div>
+      <HeroLottie Source={EventsHeroLottie} style={{ height: '400px', width: '100%' }} />
     </div>
   </div>
 </section>

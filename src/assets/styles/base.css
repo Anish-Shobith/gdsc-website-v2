@@ -68,3 +68,24 @@
 [data-aw-toggle-menu].expanded g > path:last-child {
   @apply rotate-45 translate-y-[-8px] translate-x-[14px];
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  .hiddena {
+    transition: all 1s;
+  }
+}
+
+.hiddena {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.showa {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+

@@ -2,6 +2,8 @@
 import { SITE } from '~/config';
 import Layout from '~/layouts/PageLayout.astro';
 
+import Hero from '~/components/widgets/Hero/Events.astro';
+
 const meta = {
   title: SITE.title,
   description: SITE.description,
@@ -9,6 +11,17 @@ const meta = {
 };
 ---
 <Layout {meta}>
+  <Hero
+  callToAction={{ text: 'Join Us', href: 'https://gdsc.community.dev/st-joseph-engineering-college-mangaluru/' }}>
+    <Fragment slot="title">
+      Developer Student Clubs <span class="text-accent dark:text-purple-500 highlight">SJEC</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      <span class="text-accent dark:text-purple-500 highlight font-semibold">Google Developer Student Clubs</span> are community groups at universities for students interested in Google developer technologies.
+      By participating in <span class="text-accent dark:text-purple-500 highlight font-semibold">GDSC</span>, students expand their knowledge in a peer-to-peer learning environment while also developing solutions
+      for local businesses and their community.
+  </Fragment>
+  </Hero>
 </Layout>
 
 

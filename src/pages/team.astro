@@ -2,6 +2,8 @@
 import { SITE } from '~/config';
 import Layout from '~/layouts/PageLayout.astro';
 
+import Hero from '~/components/widgets/Hero/Team.astro';
+
 const meta = {
   title: SITE.title,
   description: SITE.description,
@@ -9,4 +11,5 @@ const meta = {
 };
 ---
 <Layout {meta}>
+  <Hero />
 </Layout>

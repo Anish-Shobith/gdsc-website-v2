@@ -116,4 +116,17 @@ import { SITE } from '~/config';
     document.getElementById('header')?.classList.remove('h-screen');
     document.querySelector('#header nav')?.classList.add('hidden');
   };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('showa');
+      } else {
+        entry.target.classList.remove('showa');
+      }
+    });
+  });
+
+  const hiddenElements = document.querySelectorAll('.hiddena');
+  hiddenElements.forEach((el) => observer.observe(el));
 </script>

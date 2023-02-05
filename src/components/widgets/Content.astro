@@ -1,5 +1,8 @@
 ---
-import HomeContent from '../lottie/HomeContent';
+import Lottie from '~/components/Lottie';
+// @ts-ignore
+import HomeContent from '~/assets/lottie/homecontent.lottie';
+
 interface Item {
   title: string;
   description?: string;
@@ -56,23 +59,23 @@ const {
   <div class="mx-auto max-w-7xl p-4 md:px-8">
     <div class={`md:flex ${isReversed ? 'md:flex-row-reverse' : ''} md:gap-16`}>
       <div class="md:basis-1/2 self-center">
-        {content && <div class="mb-12 text-lg dark:text-slate-400" set:html={content} />}
+        {content && <div class="hiddena mb-12 text-lg dark:text-slate-400" set:html={content} />}
 
         {
           items && (
             <div class="space-y-8">
               {items.map(({ title: title2, description }) => (
-                  <div class="ml-4">
+                  <div class="hiddena ml-4">
                     {title2 && <h3 class="text-lg font-medium leading-6 dark:text-white">{title2}</h3>}
-                    {description && <p class="mt-2 text-muted dark:text-slate-400" set:html={description} />}
+                    {description && <p class="hiddena mt-2 text-muted dark:text-slate-400" set:html={description} />}
                   </div>
               ))}
             </div>
           )
         }
       </div>
-      <div aria-hidden="true" class="mt-10 md:mt-0 md:basis-1/2">
-        <HomeContent client:load />
+      <div aria-hidden="true" class="hiddena mt-10 md:mt-0 md:basis-1/2">
+        <Lottie LottieSource={HomeContent} client:load />
       </div>
     </div>
   </div>

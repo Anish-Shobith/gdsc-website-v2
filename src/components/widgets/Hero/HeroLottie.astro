@@ -1,0 +1,8 @@
+---
+import Lottie from '~/components/Lottie';
+
+const { Source, style } = Astro.props;
+---
+<div class="basis-1/2">
+    <Lottie LottieSource={Source} style={style} client:load/>
+</div>
