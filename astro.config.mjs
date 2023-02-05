@@ -7,6 +7,7 @@ import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
 import image from '@astrojs/image';
 import compress from 'astro-compress';
+import { VitePWA } from 'vite-plugin-pwa';
 
 import { SITE } from './src/config';
 
@@ -38,6 +39,51 @@ export default defineConfig({
     react()
   ],
   vite: {
+    plugins: [
+      VitePWA({
+        registerType: 'autoUpdate',
+        manifest: {
+          name: 'GDSC SJEC',
+          short_name: 'GDSC SJEC',
+          start_url: '/',
+          display: 'fullscreen',
+          orientation: 'any',
+          background_color: '#0f172a',
+          theme_color: '#0f172a',
+          icons: [
+            {
+              src: '/icons/android-chrome-192x192.png',
+              sizes: '192x192',
+              type: 'image/png',
+            },
+            {
+              src: '/icons/android-chrome-512x512.png',
+              sizes: '512x512',
+              type: 'image/png',
+            },
+            {
+              src: '/icons/android-chrome-maskable-192x192.png',
+              sizes: '192x192',
+              type: 'image/png',
+              purpose: 'any maskable',
+            },
+            {
+              src: '/icons/android-chrome-maskable-512x512.png',
+              sizes: '512x512',
+              type: 'image/png',
+              purpose: 'any maskable',
+            },
+          ],
+        },
+        workbox: {
+          globDirectory: 'dist',
+          globPatterns: ['**/*.{js,css,svg,png,jpg,jpeg,gif,webp,woff,woff2,ttf,eot,ico,lottie}'],
+        },
+        // Don't fallback on document based (e.g. `/some-page`) requests
+        // This removes an errant console.log message from showing up.
+        navigateFallback: null
+      })
+    ],
     ssr: {
       external:  ['svgo']
     },

@@ -47,8 +47,15 @@ const image =
     : null;
 ---
 
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset='UTF-8' />
+<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+<meta http-equiv='Content-Language' content='en' />
+<meta name='mobile-web-app-capable' content='yes' />
+<meta name='apple-mobile-web-app-capable' content='yes' />
+<meta name="msapplication-config" content="/browserconfig.xml" />
+<meta name='msapplication-TileColor' content='#0f172a' />
+<meta name='theme-color' content='#0f172a' />
 
 <AstroSeo
   title={title}
@@ -77,6 +84,10 @@ const image =
 />
 
 <CustomStyles />
-<link rel="shortcut icon" href={getAsset('/favicon.ico')} />
-<link rel="icon" type="image/svg+xml" href={getAsset('/favicon.svg')} />
-<link rel="mask-icon" href={getAsset('/favicon.svg')} color="#8D46E7" />
+<link rel='shortcut icon' href={getAsset('/favicon.ico')} />
+<link rel='icon' type='image/svg+xml' href={getAsset('/favicon.svg')} />
+<link rel='mask-icon' href={getAsset('/favicon.svg')} color='#8D46E7' />
+<link rel='apple-touch-icon' sizes='180x180' href={getAsset('/icons/apple-touch-icon.png')} />
+<link rel='icon' type='image/png' sizes='32x32' href={getAsset('/icons/favicon-32x32.png')} />
+<link rel='icon' type='image/png' sizes='16x16' href={getAsset('/icons/favicon-16x16.png')} />
+<link rel="manifest" href="/manifest.webmanifest" />
