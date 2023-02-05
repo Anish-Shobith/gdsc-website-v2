@@ -42,6 +42,11 @@ export default defineConfig({
     plugins: [
       VitePWA({
         registerType: 'autoUpdate',
+        includeAssets: [
+          'robots.txt',
+          '*.svg',
+          '*.png'
+        ],
         manifest: {
           name: 'GDSC SJEC',
           short_name: 'GDSC SJEC',
@@ -81,7 +86,7 @@ export default defineConfig({
         },
         // Don't fallback on document based (e.g. `/some-page`) requests
         // This removes an errant console.log message from showing up.
-        navigateFallback: null
+        navigateFallback: undefined
       })
     ],
     ssr: {
