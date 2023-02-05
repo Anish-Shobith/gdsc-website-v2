@@ -4,15 +4,15 @@ export const headerData = {
   links: [
     {
       text: 'Events',
-      href: getPermalink('/events')
+      href: getPermalink('/events'),
     },
     {
       text: 'Projects',
-      href: getPermalink('/projects')
+      href: getPermalink('/projects'),
     },
     {
       text: 'Team',
-      href: getPermalink('/team')
+      href: getPermalink('/team'),
     },
     {
       text: 'FAQ',
@@ -20,10 +20,10 @@ export const headerData = {
     },
   ],
   actions: [
-    { type: 'button', text: 'Join Us', href: 'https://gdsc.community.dev/st-joseph-engineering-college-mangaluru/' }
+    { type: 'button', text: 'Join Us', href: 'https://gdsc.community.dev/st-joseph-engineering-college-mangaluru/' },
   ],
 };
-  
+
 export const footerData = {
   socialLinks: [
     { ariaLabel: 'Mail', icon: 'tabler:inbox', href: 'mailto:gdsc@sjec.ac.in' },
@@ -32,6 +32,6 @@ export const footerData = {
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/GDSC-SJEC' },
   ],
   footNote: `
-    <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://github.com/GDSC-SJEC">GDSC-SJEC</a> 2022 - present · All rights reserved.
+    <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://github.com/GDSC-SJEC">GDSC-SJEC</a> &copy; 2022 - Present · All rights reserved.
   `,
 };

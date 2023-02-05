@@ -3,13 +3,33 @@ import { SITE } from '~/config';
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero/Team.astro';
+import TeamCard from '~/components/widgets/TeamCard.astro';
 
 const meta = {
   title: SITE.title,
   description: SITE.description,
   dontUseTitleTemplate: true,
 };
+
+import { teamDetails, TeamMember } from '~/data/TeamData';
 ---
+
 <Layout {meta}>
   <Hero />
+  <!-- This example requires Tailwind CSS v2.0+ -->
+  <div>
+    <div class="max-w-7xl mx-auto py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-24">
+      <div class="space-y-12">
+        <div class="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
+          <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Meet our team</h2>
+        </div>
+        <ul
+          role="list"
+          class="mx-auto space-y-16 sm:grid sm:grid-cols-2 sm:gap-16 sm:space-y-0 lg:grid-cols-3 lg:max-w-5xl"
+        >
+          {teamDetails.map((member: TeamMember) => <TeamCard member={member} />)}
+        </ul>
+      </div>
+    </div>
+  </div>
 </Layout>
