@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-const Lottie = ({ LottieSource, loop = true, autoplay = true, style = { height: '100%', width: '100%' }}) => {
+const Lottie = ({ LottieSource, loop, autoplay = true, style = { height: '100%', width: '100%' }}) => {
   useEffect(() => {
     import('@dotlottie/player-component')
   }, [])
