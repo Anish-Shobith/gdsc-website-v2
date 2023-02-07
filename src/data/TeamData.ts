@@ -7,7 +7,7 @@ export interface Social {
   link: string;
 }
 
-type SocialTuple = [{ social: 'email', link: string }, ...Array<Social>];
+type SocialTuple = [Email, ...Array<Social>];
 
 export interface TeamMember {
   name: string;
@@ -19,7 +19,7 @@ export interface TeamMember {
 export const teamDetails: TeamMember[] = [
   {
     name: 'Pragnya Nagure',
-    image_url: './src/assets/images/team/4SO19CS110.jpg',
+    image_url: './src/assets/images/team/4SO19CS110.webp',
     designation: `GDSC Lead`,
     socials: [
       { social: 'email', link: 'pragnya.nagure2002@gmail.com' },
@@ -29,7 +29,7 @@ export const teamDetails: TeamMember[] = [
   },
   {
     name: 'Ashish Kishore Kumar',
-    image_url: './src/assets/images/team/4SO19CS027.png',
+    image_url: './src/assets/images/team/4SO19CS027.webp',
     designation: `Game Development Lead`,
     socials: [
       { social: 'email', link: 'ashishkishore0812@gmail.com' },
@@ -39,7 +39,7 @@ export const teamDetails: TeamMember[] = [
   },
   {
     name: 'Godnon Dsilva',
-    image_url: './src/assets/images/team/4SO19CS056.jpg',
+    image_url: './src/assets/images/team/4SO19CS056.webp',
     designation: `Web Development Lead`,
     socials: [
       { social: 'email', link: 'godnondsilva@gmail.com' },
@@ -49,7 +49,7 @@ export const teamDetails: TeamMember[] = [
   },
   {
     name: 'Avinash Murali',
-    image_url: './src/assets/images/team/4SO19CS034.jpg',
+    image_url: './src/assets/images/team/4SO19CS034.webp',
     designation: `UI/UX Lead`,
     socials: [
       { social: 'email', link: 'avinashmuralidharan2@gmail.com' },
@@ -59,7 +59,7 @@ export const teamDetails: TeamMember[] = [
   },
   {
     name: 'Pravin Kumar',
-    image_url: './src/assets/images/team/4SO19CS119.jpg',
+    image_url: './src/assets/images/team/4SO19CS119.webp',
     designation: `AI/ML Lead`,
     socials: [
       { social: 'email', link: '19cs119.pravin@sjec.ac.in' },
@@ -69,7 +69,7 @@ export const teamDetails: TeamMember[] = [
   },
   {
     name: 'Yashas Ip',
-    image_url: './src/assets/images/team/4SO19CS180.jpg',
+    image_url: './src/assets/images/team/4SO19CS180.webp',
     designation: `Competitive Programming Lead`,
     socials: [
       { social: 'email', link: '19cs180.yashas@sjec.ac.in' },
@@ -79,7 +79,7 @@ export const teamDetails: TeamMember[] = [
   },
   {
     name: 'Pratheek R',
-    image_url: './src/assets/images/team/4SO19CS116.jpeg',
+    image_url: './src/assets/images/team/4SO19CS116.webp',
     designation: `Android Lead`,
     socials: [
       { social: 'email', link: 'r.pratheek01@gmail.com' },
@@ -89,7 +89,7 @@ export const teamDetails: TeamMember[] = [
   },
   {
     name: 'Oren Saldanha',
-    image_url: './src/assets/images/team/4SO19CS105.jpg',
+    image_url: './src/assets/images/team/4SO19CS105.webp',
     designation: `Cloud Lead`,
     socials: [
       { social: 'email', link: 'orensaldanha@gmail.com' },
@@ -99,7 +99,7 @@ export const teamDetails: TeamMember[] = [
   },
   {
     name: 'Adithya K Shetty',
-    image_url: './src/assets/images/team/4SO19CS007.png',
+    image_url: './src/assets/images/team/4SO19CS007.webp',
     designation: `Developer (Web Team)`,
     socials: [
       { social: 'email', link: '4so19cs007.adithya@sjec.ac.in'},
@@ -109,7 +109,7 @@ export const teamDetails: TeamMember[] = [
   },
   {
     name: 'Errol Ken Pereira',
-    image_url: './src/assets/images/team/4SO19CS050.jpg',
+    image_url: './src/assets/images/team/4SO19CS050.webp',
     designation: `Developer (UI/UX Team)`,
     socials: [
       { social: 'email', link: 'errolkenpereira@gmail.com' },
@@ -119,7 +119,7 @@ export const teamDetails: TeamMember[] = [
   },
   {
     name: 'Srujan Kashyap D',
-    image_url: './src/assets/images/team/4SO19CS161.jpg',
+    image_url: './src/assets/images/team/4SO19CS161.webp',
     designation: 'Developer (CP Team)',
     socials: [
       { social: 'email', link: 'srujanskd@gmail.com' },
